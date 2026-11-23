@@ -19,3 +19,9 @@ CHAINID=onyx-1
 | Evaluate an expression | `gnokey query vm/qeval -data "<pkg>.Func(1)" -remote $REMOTE` |
 | List a package's files | `gnokey query vm/qfile -data "<pkg>" -remote $REMOTE` |
 
+Notes
+
+- 1 GNOT = 1,000,000 ugnot. Onyx's gas price is 1ugnot per 1,000 gas, and storage locks 100ugnot per byte.
+- Use `-max-deposit` to cap the storage deposit a transaction may lock.
+- New packages are parked until the testnet's package approver enables them. Check https://gpas.latest.testnets.gno.land.
+- Faucet: https://faucet.gno.land (pick Onyx).
