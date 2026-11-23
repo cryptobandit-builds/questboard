@@ -2,7 +2,9 @@
 
 **An escrowed bounty board on Gno.land.** Post a task, lock GNOT as the reward, and pay whoever delivers. The reward sits in the realm's escrow until the poster awards it or it is refunded, and every address builds a public, on-chain record of what it paid out and what it earned.
 
-- **Live on the Gno.land testnet (onyx-1):** _deployment link added after deploy_
+- **Live on the Gno.land testnet (onyx-1):** https://onyx.testnets.gno.land/r/g1rwxskhs8tm98yxcj5tuehwplwnqzacuqsqgrtq/questboard
+  (deployed in tx `4gMvIFbiS/9MGbm7eFfxzbjdFdObxxnt1Qq6vQMQqhM=` at height 1356377. New onyx packages are parked until the testnet's package approver enables them, so check [gpas](https://gpas.latest.testnets.gno.land/?path=gno.land/r/g1rwxskhs8tm98yxcj5tuehwplwnqzacuqsqgrtq/questboard) if the page 404s)
+- **Demo video (1:47):** https://gitlab.com/-/project/89355941/uploads/5f7b4a6ff8efeb96a1d4346542ac473b/questboard-demo-local.mp4 (pages recorded on a local gnodev node running this exact code while the testnet package was awaiting approval)
 - **Realm path:** `gno.land/r/g1rwxskhs8tm98yxcj5tuehwplwnqzacuqsqgrtq/questboard`
 - Built by Crypto Bandit for the Gnome Tavern hackathon.
 
@@ -83,6 +85,10 @@ Quest Board is an escrow, not a court. Be clear about what it does and doesn't g
 - **Bounded loops and sizes.** At most 50 submissions and 32 funders per quest; title ≤ 80 bytes, body ≤ 4,000, link ≤ 300, note ≤ 500. The home page lists the newest 30 open quests.
 - **User text is sanitized** with `gno.land/p/nt/markdown/sanitize/v0` before rendering, so titles, bodies and notes can't inject headings, tables, raw HTML or `javascript:` links.
 
+## Demo data
+
+The first quests on the board were posted by the author to show the full flow: quest #1 was submitted, rejected with a reason, resubmitted and paid out (its deliverable is [`docs/gnokey-cheatsheet.md`](docs/gnokey-cheatsheet.md)); #2 has a rejected submission; #3 has a second funder. They're real on-chain transactions, but between the author's own two wallets.
+
 ## Develop
 
 Requires the Gno toolchain (`gno`, `gnokey`, `gnodev`) from [gnolang/gno](https://github.com/gnolang/gno). It was built and tested against `v1.8.0-rc.1`, the version onyx runs.
@@ -102,6 +108,7 @@ Tests cover posting, funding, submitting, rejecting and resubmitting, awarding (
 - `render.gno`: gnoweb pages
 - `questboard_test.gno`: tests
 - `scripts/tx.sh`: gnokey helper
+- `docs/gnokey-cheatsheet.md`: quest #1's deliverable, a gnokey cheat sheet for onyx-1
 
 ## License
 
