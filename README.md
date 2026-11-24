@@ -4,7 +4,7 @@
 
 - **Live on the Gno.land testnet (onyx-1):** https://onyx.testnets.gno.land/r/g1rwxskhs8tm98yxcj5tuehwplwnqzacuqsqgrtq/questboard
   (deployed in tx `4gMvIFbiS/9MGbm7eFfxzbjdFdObxxnt1Qq6vQMQqhM=` at height 1356377. New onyx packages are parked until the testnet's package approver enables them, so check [gpas](https://gpas.latest.testnets.gno.land/?path=gno.land/r/g1rwxskhs8tm98yxcj5tuehwplwnqzacuqsqgrtq/questboard) if the page 404s)
-- **Demo video (1:47):** https://gitlab.com/-/project/89355941/uploads/5f7b4a6ff8efeb96a1d4346542ac473b/questboard-demo-local.mp4 (pages recorded on a local gnodev node running this exact code while the testnet package was awaiting approval)
+- **Demo video:** https://gitlab.com/-/project/89355941/uploads/51fd2e76eaec616b5542119f78930aac/questboard-demo.mp4 (recorded on the live onyx-1 testnet deployment)
 - **Realm path:** `gno.land/r/g1rwxskhs8tm98yxcj5tuehwplwnqzacuqsqgrtq/questboard`
 - Built by Crypto Bandit for the Gnome Tavern hackathon.
 
